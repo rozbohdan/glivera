@@ -12,7 +12,7 @@
 }
 
 .dashboard__sidebar {
-  @include flex(initial, initial, row, px-to-rem(16));
+  @include flex(center, initial, row, px-to-rem(10));
   background-color: $light;
   box-shadow: 0 px-to-rem(10) px-to-rem(60) rgba(226, 236, 249, 0.5);
   padding: px-to-rem(16);
@@ -21,6 +21,7 @@
   z-index: 1;
 
   @media screen and (min-width: $breakpoint-sm) {
+    align-items: initial;
     bottom: 0;
     flex-direction: column;
     grid-gap: px-to-rem(53);
@@ -194,7 +195,9 @@
 }
 
 .dashboard__footer {
-  margin-top: auto;
+  @media screen and (min-width: $breakpoint-sm) {
+    margin-top: auto;
+  }
 }
 
 .dashboard__profile {
