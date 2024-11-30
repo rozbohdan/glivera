@@ -1,0 +1,289 @@
+@use "../functions/px-to-rem" as *;
+@use "../variables/breakpoints" as *;
+@use "../variables/colors" as *;
+@use "../mixins/boxSize" as *;
+@use "../mixins/flex" as *;
+@use "../mixins/fontSettings" as *;
+
+.customers {
+  background: $light;
+  box-shadow: 0 px-to-rem(10) px-to-rem(60) rgba(226, 236, 249, 0.5);
+  border-radius: px-to-rem(16);
+
+  @media screen and (min-width: $breakpoint-md) {
+    border-radius: px-to-rem(30);
+  }
+}
+
+.customers__header {
+  @include flex(initial, space-between, column, px-to-rem(16));
+  padding: px-to-rem(16);
+
+  @media screen and (min-width: $breakpoint-sm) {
+    align-items: center;
+    flex-direction: row;
+    padding: px-to-rem(24);
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding: px-to-rem(30) px-to-rem(53) px-to-rem(40) px-to-rem(38);
+  }
+}
+
+.customers__header-info {
+  @include flex(initial, initial, column, px-to-rem(7));
+}
+
+.customers__title {
+  @include fontSettings(px-to-rem(18), px-to-rem(26), 600);
+
+  @media screen and (min-width: $breakpoint-sm) {
+    @include fontSettings(px-to-rem(22), px-to-rem(33), 600);
+  }
+}
+
+.customers__subtitle {
+  @include fontSettings(px-to-rem(12), px-to-rem(16));
+  color: $green;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    @include fontSettings(px-to-rem(14), px-to-rem(21));
+  }
+}
+
+.customers__search {
+  @include flex(center, initial, row, px-to-rem(8));
+  position: relative;
+}
+
+.customers__search-icon {
+  @include boxSize(px-to-rem(24));
+  color: $grey-100;
+  left: px-to-rem(8);
+  position: absolute;
+  pointer-events: none;
+}
+
+.customers__search-input {
+  @include fontSettings(px-to-rem(12), px-to-rem(18));
+  background-color: $light-100;
+  border-radius: px-to-rem(10);
+  height: px-to-rem(38);
+  padding: px-to-rem(8) px-to-rem(16) px-to-rem(8) px-to-rem(40);
+  transition: background-color 330ms;
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    width: px-to-rem(216);
+  }
+
+  &::placeholder {
+    color: $light-200;
+  }
+
+  &:hover {
+    background-color: $light-500;
+  }
+}
+
+.customers__table-wrapper {
+  padding: 0 px-to-rem(16);
+  overflow: auto;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    padding: 0 px-to-rem(24);
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    padding: 0 px-to-rem(40);
+  }
+}
+
+.customers__table {
+  min-width: px-to-rem(700);
+  position: relative;
+  white-space: nowrap;
+  width: 100%;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    min-width: px-to-rem(800);
+  }
+
+  &:before {
+    background-color: $light-400;
+    content: '';
+    height: px-to-rem(1);
+    left: px-to-rem(-40);
+    position: absolute;
+    right: px-to-rem(-40);
+    top: px-to-rem(26);
+
+    @media screen and (min-width: $breakpoint-sm) {
+      top: px-to-rem(35);
+    }
+  }
+}
+
+.customers__table-header {
+  @include fontSettings(px-to-rem(12), px-to-rem(16), 500);
+  color: $light-200;
+  padding: 0 px-to-rem(10) px-to-rem(10);
+  text-align: left;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    @include fontSettings(px-to-rem(14), px-to-rem(21), 500);
+    padding: 0 px-to-rem(20) px-to-rem(14);
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+    text-align: center;
+    width: px-to-rem(80);
+  }
+}
+
+.customers__table-cell {
+  @include fontSettings(px-to-rem(12), px-to-rem(16), 500);
+  border-bottom: px-to-rem(1) solid $light-400;
+  padding: px-to-rem(10);
+
+  @media screen and (min-width: $breakpoint-sm) {
+    @include fontSettings(px-to-rem(14), px-to-rem(21), 500);
+    padding: px-to-rem(20);
+  }
+
+  &:first-child {
+    padding-left: 0;
+  }
+
+  &:last-child {
+    padding-right: 0;
+  }
+}
+
+.customers__status {
+  @include fontSettings(px-to-rem(12), px-to-rem(16), 500);
+  @include flex(center, center);
+  border: px-to-rem(1) solid transparent;
+  border-radius: px-to-rem(4);
+  height: px-to-rem(29);
+  padding: px-to-rem(2) px-to-rem(17);
+  text-align: center;
+  width: px-to-rem(80);
+
+  @media screen and (min-width: $breakpoint-sm) {
+    @include fontSettings(px-to-rem(14), px-to-rem(21), 500);
+  }
+
+  &.customers__status--active {
+    background-color: $green-dark;
+    border-color: $green-100;
+    color: $green-200;
+  }
+
+  &.customers__status--inactive {
+    background-color: $red-light;
+    border-color: $red;
+    color: $red;
+  }
+}
+
+.customers__footer {
+  @include flex(center, space-between, column, px-to-rem(16));
+  padding: px-to-rem(16);
+
+  @media screen and (min-width: $breakpoint-sm) {
+    padding: px-to-rem(24);
+  }
+
+  @media screen and (min-width: $breakpoint-md) {
+    flex-direction: row;
+    padding: px-to-rem(30) px-to-rem(40) px-to-rem(40) px-to-rem(38);
+  }
+}
+
+.customers__footer-description {
+  @include fontSettings(px-to-rem(12), px-to-rem(16), 500);
+  color: $light-200;
+
+  @media screen and (min-width: $breakpoint-sm) {
+    @include fontSettings(px-to-rem(14), px-to-rem(21), 500);
+  }
+}
+
+.customers__pagination-list {
+  @include flex(center, initial, row, px-to-rem(12));
+}
+
+.customers__pagination-item {
+  &:hover,
+  &.customers__pagination-item--active {
+    .customers__pagination-link {
+      background-color: $primary;
+      border-color: $primary;
+      color: $light;
+    }
+  }
+
+  &:active {
+    .customers__pagination-link {
+      background-color: $light-300;
+      color: $grey-darker;
+    }
+  }
+
+  &:last-child {
+    .customers__pagination-button-icon {
+      transform: rotate(180deg);
+    }
+  }
+
+  &.customers__pagination-item--default {
+    .customers__pagination-link {
+      background-color: transparent;
+      border: none;
+      min-width: initial;
+      padding: 0;
+    }
+
+    &:hover {
+      .customers__pagination-link {
+        color: $primary;
+      }
+    }
+  }
+}
+
+.customers__pagination-button,
+.customers__pagination-link {
+  @include flex(center, center);
+  @include fontSettings(px-to-rem(12), px-to-rem(12), 500);
+  background-color: $light-300;
+  border: px-to-rem(1) solid $light-400;
+  border-radius: 4px;
+  color: $grey-darker;
+  height: px-to-rem(24);
+  min-width: px-to-rem(25);
+  padding: px-to-rem(5) px-to-rem(4);
+  transition: 330ms;
+}
+
+.customers__pagination-button {
+  min-width: px-to-rem(26);
+
+  &:hover {
+    background-color: $light-400;
+  }
+
+  &:active {
+    background-color: $light;
+  }
+}
+
+.customers__pagination-button-icon {
+  @include boxSize(px-to-rem(8));
+}

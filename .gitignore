@@ -1,0 +1,21 @@
+# Node.js
+node_modules/
+
+# Production
+/build
+/dist
+
+# Parcel-bundler
+.cache
+.parcel-cache
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# MacOS files
+.DS_Store
+
+package-lock.json

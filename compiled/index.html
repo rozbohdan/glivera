@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Glivera test project">
+    <title>Glivera Project</title>
+    <link rel="icon" type="image/png" href="images/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png" />
+    <script defer src="bundle.js"></script></head>
+<body>
+    <div class="dashboard">
+        <aside class="dashboard__sidebar">
+            <div class="dashboard__logo">
+                <svg class="dashboard__logo-icon" height="37px" width="37px">
+                    <use xlink:href="images/icons/sprite-icons.svg#setting"></use>
+                </svg>
+                <h1 class="dashboard__logo-title">
+                    Dashboard <span class="dashboard__logo-title-span">v.01</span>
+                </h1>
+            </div>
+            <button class="dashboard__nav-action" data-nav-action="toggle">
+                <span class="dashboard__nav-action-stroke"></span>
+                <span class="dashboard__nav-action-stroke"></span>
+                <span class="dashboard__nav-action-stroke"></span>
+            </button>
+            <nav class="dashboard__nav" data-nav="menu">
+                <ul class="dashboard__menu">
+                    <li class="dashboard__menu-item">
+                        <a href="#" class="dashboard__menu-link">
+                            <svg class="dashboard__menu-icon" height="24px" width="24px">
+                                <use xlink:href="images/icons/sprite-icons.svg#key-square"></use>
+                            </svg>
+                            Dashboard
+                        </a>
+                    </li>
+                    <li class="dashboard__menu-item">
+                        <a href="#" class="dashboard__menu-link">
+                            <svg class="dashboard__menu-icon" height="24px" width="24px">
+                                <use xlink:href="images/icons/sprite-icons.svg#square"></use>
+                            </svg>
+                            Product
+                        </a>
+                    </li>
+                    <li class="dashboard__menu-item dashboard__menu-item--active">
+                        <a href="#" class="dashboard__menu-link">
+                            <svg class="dashboard__menu-icon" height="24px" width="24px">
+                                <use xlink:href="images/icons/sprite-icons.svg#user-square"></use>
+                            </svg>
+                            Customers
+                        </a>
+                    </li>
+                    <li class="dashboard__menu-item">
+                        <a href="#" class="dashboard__menu-link">
+                            <svg class="dashboard__menu-icon" height="24px" width="24px">
+                                <use xlink:href="images/icons/sprite-icons.svg#wallet-money"></use>
+                            </svg>
+                            Income
+                        </a>
+                    </li>
+                    <li class="dashboard__menu-item">
+                        <a href="#" class="dashboard__menu-link">
+                            <svg class="dashboard__menu-icon" height="24px" width="24px">
+                                <use xlink:href="images/icons/sprite-icons.svg#discount-shape"></use>
+                            </svg>
+                            Promote
+                        </a>
+                    </li>
+                    <li class="dashboard__menu-item">
+                        <a href="#" class="dashboard__menu-link">
+                            <svg class="dashboard__menu-icon" height="24px" width="24px">
+                                <use xlink:href="images/icons/sprite-icons.svg#message-question"></use>
+                            </svg>
+                            Help
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="dashboard__footer">
+                <div class="dashboard__profile">
+                    <img src="images/profile-user-icon.webp" alt="Evano's avatar" class="dashboard__profile-image">
+                    <div class="dashboard__profile-info">
+                        <p class="dashboard__profile-name">Evano</p>
+                        <p class="dashboard__profile-role">Project Manager</p>
+                    </div>
+                </div>
+            </footer>
+        </aside>
+
+        <main class="dashboard__main">
+            <header class="dashboard__header">
+                <h2 class="dashboard__title">Hello Evano <span class="dashboard__title-span">👋🏼</span>,</h2>
+            </header>
+
+            <section class="dashboard__content">
+                <div class="customers">
+                    <header class="customers__header">
+                        <div class="customers__header-info">
+                            <h3 class="customers__title">All Customers</h3>
+                            <p class="customers__subtitle">Active Members</p>
+                        </div>
+                        <div class="customers__search">
+                            <svg class="customers__search-icon" height="24px" width="24px">
+                                <use xlink:href="images/icons/sprite-icons.svg#search"></use>
+                            </svg>
+                            <input
+                                type="search"
+                                class="customers__search-input"
+                                placeholder="Search"
+                                aria-label="Search customers"
+                            />
+                        </div>
+                    </header>
+                    <div class="customers__table-wrapper">
+                        <table class="customers__table">
+                            <thead class="customers__table-head">
+                                <tr class="customers__table-row">
+                                    <th class="customers__table-header">Customer Name</th>
+                                    <th class="customers__table-header">Company</th>
+                                    <th class="customers__table-header">Phone Number</th>
+                                    <th class="customers__table-header">Email</th>
+                                    <th class="customers__table-header">Country</th>
+                                    <th class="customers__table-header">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody class="customers__table-body">
+                                <tr class="customers__table-row">
+                                    <td class="customers__table-cell">Jane Cooper</td>
+                                    <td class="customers__table-cell">Microsoft</td>
+                                    <td class="customers__table-cell">(225) 555-0118</td>
+                                    <td class="customers__table-cell">jane@microsoft.com</td>
+                                    <td class="customers__table-cell">United States</td>
+                                    <td class="customers__table-cell">
+                                        <span class="customers__status customers__status--active">Active</span>
+                                    </td>
+                                </tr>
+                                <tr class="customers__table-row">
+                                    <td class="customers__table-cell">Floyd Miles</td>
+                                    <td class="customers__table-cell">Yahoo</td>
+                                    <td class="customers__table-cell">(205) 555-0100</td>
+                                    <td class="customers__table-cell">floyd@yahoo.com</td>
+                                    <td class="customers__table-cell">Kiribati</td>
+                                    <td class="customers__table-cell">
+                                        <span class="customers__status customers__status--inactive">Inactive</span>
+                                    </td>
+                                </tr>
+                                <tr class="customers__table-row">
+                                    <td class="customers__table-cell">Ronald Richards</td>
+                                    <td class="customers__table-cell">Adobe</td>
+                                    <td class="customers__table-cell">(302) 555-0107</td>
+                                    <td class="customers__table-cell">ronald@adobe.com</td>
+                                    <td class="customers__table-cell">Israel</td>
+                                    <td class="customers__table-cell">
+                                        <span class="customers__status customers__status--inactive">Inactive</span>
+                                    </td>
+                                </tr>
+                                <tr class="customers__table-row">
+                                    <td class="customers__table-cell">Marvin McKinney</td>
+                                    <td class="customers__table-cell">Tesla</td>
+                                    <td class="customers__table-cell">(252) 555-0126</td>
+                                    <td class="customers__table-cell">marvin@tesla.com</td>
+                                    <td class="customers__table-cell">Iran</td>
+                                    <td class="customers__table-cell">
+                                        <span class="customers__status customers__status--active">Active</span>
+                                    </td>
+                                </tr>
+                                <tr class="customers__table-row">
+                                    <td class="customers__table-cell">Jerome Bell</td>
+                                    <td class="customers__table-cell">Google</td>
+                                    <td class="customers__table-cell">(629) 555-0129</td>
+                                    <td class="customers__table-cell">jerome@google.com</td>
+                                    <td class="customers__table-cell">Réunion</td>
+                                    <td class="customers__table-cell">
+                                        <span class="customers__status customers__status--active">Active</span>
+                                    </td>
+                                </tr>
+                                <tr class="customers__table-row">
+                                    <td class="customers__table-cell">Kathryn Murphy</td>
+                                    <td class="customers__table-cell">Microsoft</td>
+                                    <td class="customers__table-cell">(406) 555-0120</td>
+                                    <td class="customers__table-cell">kathryn@microsoft.com</td>
+                                    <td class="customers__table-cell">Curaçao</td>
+                                    <td class="customers__table-cell">
+                                        <span class="customers__status customers__status--active">Active</span>
+                                    </td>
+                                </tr>
+                                <tr class="customers__table-row">
+                                    <td class="customers__table-cell">Jacob Jones</td>
+                                    <td class="customers__table-cell">Yahoo</td>
+                                    <td class="customers__table-cell">(208) 555-0112</td>
+                                    <td class="customers__table-cell">jacob@yahoo.com</td>
+                                    <td class="customers__table-cell">Brazil</td>
+                                    <td class="customers__table-cell">
+                                        <span class="customers__status customers__status--active">Active</span>
+                                    </td>
+                                </tr>
+                                <tr class="customers__table-row">
+                                    <td class="customers__table-cell">Kristin Watson</td>
+                                    <td class="customers__table-cell">Facebook</td>
+                                    <td class="customers__table-cell">(704) 555-0127</td>
+                                    <td class="customers__table-cell">kristin@facebook.com</td>
+                                    <td class="customers__table-cell">Åland Islands</td>
+                                    <td class="customers__table-cell">
+                                        <span class="customers__status customers__status--inactive">Inactive</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <footer class="customers__footer">
+                        <p class="customers__footer-description">
+                            Showing data 1 to 8 of 256K entries
+                        </p>
+                        <nav class="customers__pagination">
+                            <ul class="customers__pagination-list">
+                                <li class="customers__pagination-item">
+                                    <button class="customers__pagination-button">
+                                        <svg class="customers__pagination-button-icon" height="8px" width="8px">
+                                            <use xlink:href="images/icons/sprite-icons.svg#chevron"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                                <li class="customers__pagination-item customers__pagination-item--active">
+                                    <a href="#" class="customers__pagination-link">1</a>
+                                </li>
+                                <li class="customers__pagination-item">
+                                    <a href="#" class="customers__pagination-link">2</a>
+                                </li>
+                                <li class="customers__pagination-item">
+                                    <a href="#" class="customers__pagination-link">3</a>
+                                </li>
+                                <li class="customers__pagination-item">
+                                    <a href="#" class="customers__pagination-link">4</a>
+                                </li>
+                                <li class="customers__pagination-item customers__pagination-item--default">
+                                    <a href="#" class="customers__pagination-link">...</a>
+                                </li>
+                                <li class="customers__pagination-item">
+                                    <a href="#" class="customers__pagination-link">40</a>
+                                </li>
+                                <li class="customers__pagination-item">
+                                    <button class="customers__pagination-button">
+                                        <svg class="customers__pagination-button-icon" height="8px" width="8px">
+                                            <use xlink:href="images/icons/sprite-icons.svg#chevron"></use>
+                                        </svg>
+                                    </button>
+                                </li>
+                            </ul>
+                        </nav>
+                    </footer>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>

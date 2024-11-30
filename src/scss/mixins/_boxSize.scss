@@ -1,0 +1,17 @@
+@mixin boxSize($size: 0) {
+  height: $size;
+  max-height: $size;
+  min-height: $size;
+  max-width: $size;
+  min-width: $size;
+  width: $size;
+}
+
+@mixin boxSizeConfigured($height: 0, $width: 0) {
+  height: $height;
+  max-height: $height;
+  min-height: $height;
+  max-width: $width;
+  min-width: $width;
+  width: $width;
+}
